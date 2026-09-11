@@ -1,16 +1,16 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    color:black;
+    color:#6A5A45;
 }
 .navbar{background-color:antiquewhite;}
 .s{
-    color:#C9BFB1;
+    color:#F0DDC8;
 }
 .a{
-    color: black;
+    color: #B09480;
 }
-.nav-link{color: black; 
+.nav-link{color: #6A5A45; 
 }
 .nav-link:hover{
     text-decoration: underline;
@@ -20,8 +20,8 @@ body {
 
 
 #home{
-    padding: 200px;
-    background-color:#C9BFB1;
+    padding: 180px;
+    background-color:#F0DDC8;
       display: flex;
       gap: 300px;
   
@@ -33,7 +33,7 @@ h1{
 
 #cv{
     color: white;
-    background-color: black;
+    background-color: #6A5A45;
     box-shadow: 3px 3px 2px gray;
     width: fit-content;
     padding: 10px;
@@ -43,11 +43,11 @@ h1{
     
 }
 #cv:hover{
-    background-color:#C9BFB1;
+    background-color:antiquewhite;
    
 }
 .img1{  padding: 10px;
-    background-color: black;
+    background-color: #6A5A45;
     border-radius: 80px;
     box-shadow: 5px 5px 4px gray ;
       
@@ -56,9 +56,10 @@ h1{
 
 
 /*Educatione*/
+
 #education{    background-color:antiquewhite;
    
-    padding: 200px;
+    padding: 180px;
    
 }
  #education .edu{ 
@@ -76,15 +77,21 @@ h1{
     gap: 3px;
 
 }
+
+#education h2{margin-bottom: 30px;
+    font-family:fantasy;
+    
+    font-size: 100px;}
+    /*experience*/
 #experience{
- background-color:#C9BFB1;
- padding: 70px;
+ background-color:#F0DDC8;
+ padding: 180px;
  
   
 }
 #experience div{
     display: flex;
-    background-color: antiquewhite;
+    background-color: white;
     border: 3px solid black;
     border-radius: 30px;
     padding: 10px;
@@ -94,8 +101,104 @@ h1{
     
 }
 #experience h2{
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     font-family:fantasy;
     
     font-size: 100px;
+}
+/*qualifications*/
+#qualifications{background-color:antiquewhite;
+   
+    padding: 180px;
+
+}
+#qualifications .h2{ margin-bottom: 30px;
+    font-family:fantasy;
+    
+    font-size: 100px;}
+.qua{
+    display: flex;
+    gap: 7px;
+    flex: 1 ;
+    
+}
+.q1{
+    border: 3px solid black;
+    box-shadow: 3px 3px 3px gray;
+    border-radius: 30px;
+    padding: 5px;
+    background-color:white;
+    
+
+}
+.q2{ border: 3px solid black;
+    box-shadow: 3px 3px 3px gray;
+    border-radius: 30px;
+    padding: 5px; 
+    background-color:white;
+}
+.q1:hover{
+    transform:scale(1.1);
+}
+.q2:hover{
+    transform:scale(1.1);
+}
+/*skills*/
+#skills{
+
+     background-color:#F0DDC8;
+;
+
+   
+    padding: 180px;
+}
+#skills div {
+display: flex;
+    
+    align-items: center;
+    gap: 5px;
+    
+}
+#skills h2{margin-bottom: 30px;
+    font-family:fantasy;
+    font-size: 100px;}
+#skills .sk{
+    width: fit-content;
+    border: 3px solid black;
+     border-radius: 30px;
+      font-weight: bold;
+    background-color:antiquewhite;
+    padding: 8px;
+    flex: 1;
+     
+    
+}
+.sk:hover{
+      transform: translateY(-8px);
+      box-shadow: 0 8px 15px gray;
+      
+}
+/*projects*/
+#projects{
+    background-color:antiquewhite;
+
+   
+    padding: 180px;
+}
+.pro{
+     width: fit-content;
+    border: 3px solid black;
+     border-radius: 30px;
+      font-weight: bold;
+    background-color:white;
+    padding: 8px;
+    flex: 1;
+     
+}
+ #projects .h2{margin-bottom: 30px;
+    font-family: fantasy;
+    font-size: 100px;}
+#projects .img{
+    display: block;
+margin: auto;
 }
