@@ -1,12 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px;
-}
+
 body {
     font-family: 'Poppins', sans-serif;
     color:black;
@@ -18,8 +10,16 @@ body {
 .a{
     color: black;
 }
-.nav-link{color: black;}
-.container2{
+.nav-link{color: black; 
+}
+.nav-link:hover{
+    text-decoration: underline;
+}
+
+
+
+
+#home{
     padding: 200px;
     background-color:#C9BFB1;
       display: flex;
@@ -52,4 +52,50 @@ h1{
     box-shadow: 5px 5px 4px gray ;
       
 
+}
+
+
+/*Educatione*/
+#education{    background-color:antiquewhite;
+   
+    padding: 200px;
+   
+}
+ #education .edu{ 
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 30px;
+    padding: 10px;}
+#education .just{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    font-weight: bold;
+    font-size:30px;
+   
+    gap: 3px;
+
+}
+#experience{
+ background-color:#C9BFB1;
+ padding: 70px;
+ 
+  
+}
+#experience div{
+    display: flex;
+    background-color: antiquewhite;
+    border: 3px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    width: fit-content;
+    font-size: x-large;
+    gap: 3px;
+    
+}
+#experience h2{
+    margin-bottom: 60px;
+    font-family:fantasy;
+    
+    font-size: 100px;
 }
