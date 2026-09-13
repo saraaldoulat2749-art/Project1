@@ -7,9 +7,7 @@ body {
 display: flex;
 flex-direction: column;
 align-items: flex-start;}
-.s{
-    color:#F0DDC8;
-}
+
 .a{
     color: #B09480;
 }
@@ -17,6 +15,7 @@ a{
     color: #B09480;
 }
 .nav-link{color: #6A5A45; 
+  font-size: 20px;
 }
 .nav-link:hover{
     text-decoration: underline;
@@ -25,6 +24,7 @@ a{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 50px;
 font-weight: bold;
+text-shadow: 3px 3px 3px black;
 }
 
 
@@ -98,47 +98,48 @@ h1{
    
 }
  #about .abo{ 
-    background-color: white;
-    border: 3px solid #6A5A45;
-    border-radius: 30px;
+gap: 8px;
+   
+   display: flex;
     padding: 10px;
     margin: auto;
 font-size: large;
 font-family: initial;
-width: 950px;
-height: 280px;}
+}
 
 #about h2{margin: 0px;
   font-family: initial;
-    
-    font-size: 80px;}
-@media (max-width: 768px) {
-  #about {
-    padding: 40px 20px;
-  }
-
-  #about h2 {
-    font-size: clamp(32px, 8vw, 48px);
-    margin-bottom: 20px;
     text-align: center;
-  }
+    font-size: 50px;}
+@media screen and (max-width: 767px) {
+    
+    #about {
+        padding: 40px 20px;
+    }
 
-  #about .abo {
-    width: 100%;
-    height: auto; 
-    padding: 20px;
-    font-size: 1rem;
-    box-sizing: border-box;
-  }
+    #about h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
 
-  #about .abo p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-  }
+    #about .abo {
+        flex-direction: column;
+        align-items: center;    
+        text-align: center;     
+        padding: 0;
+    }
 
-  #about .abo p:last-child {
-    margin-bottom: 0;
-  }
+    #about .image img {
+        width: 100%;
+        max-width: 350px; 
+        height: auto;    
+        margin-top: 15px;
+    }
+    
+    #about .abo p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
 }
     /*experience*/
 
@@ -170,13 +171,17 @@ height: 280px;}
     margin: 0px;
     font-family: initial;
     font-size: 80px;
+    text-align: center;
 }
 #experience p{
     height: 85px;
-font-family: initial;
- 
+font-family: initial;}
+.ex:hover{
+background-color:antiquewhite;
+ transform: translateX(-8px);
+ }
     
-}
+
 @media (max-width: 768px) {
   #experience {
     padding: 40px 20px;
@@ -225,19 +230,39 @@ font-family: initial;
 .q1{
     border: 3px solid #6A5A45;
     box-shadow: 3px 3px 3px #6A5A45;
-    border-radius: 30px;
+  
     padding: 11px;
     background-color:white;
     width: 500px;
     height: 280px;
-
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 
 }
 
 .q1:hover{
     transform:scale(1.1);
+    
 }
-
+.q1 a{ color: white;
+  background-color: #6A5A45;
+    box-shadow: 3px 3px 2px #6A5A45;
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid #6A5A45;
+     text-decoration: none;
+   margin-top: auto;
+    align-self: center;
+}
+ 
+.qa{gap: 8px;
+  align-self: center;
+ }
+ 
+.q1 a:hover{
+  background-color: #F0DDC8;
+}
 @media (max-width: 768px) {
   #qualifications {
     padding: 40px 20px;
@@ -280,34 +305,44 @@ font-family: initial;
    
     padding: 80px;
 }
-#skills div {
+.sk {
 display: grid;
-grid-template-columns: repeat(7,1fr);
-grid-template-rows: repeat(1,1fr);
-    
-    align-items: center;
-    gap: 5px;
-   font-family: initial; 
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  font-family: initial; 
+  max-width: 800px;
+  margin: 0 auto;
+  
 }
 #skills h2{margin: 0px;
   font-family: initial;
-    font-size: 80px;}
-#skills .sk{
-    width: fit-content;
+    font-size: 70px;
+  text-align: center;}
+.skill{
+    width: 140px;
+  height: 160px;
     border: 3px solid #6A5A45;
-     border-radius: 30px;
+    display: flex;
       font-weight: bold;
     background-color:antiquewhite;
     padding: 8px;
-    flex: 1;
-     
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 18px #0a0a0a, 
+             -8px -8px 18px #262626;
+}
+   .skill img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}  
     
-}
-.sk:hover{
-      transform: translateY(-8px);
-      box-shadow: 0 8px 15px #6A5A45;
-      
-}
 @media (max-width: 768px) {
   #skills {
     padding: 40px 20px;
@@ -357,57 +392,74 @@ grid-template-rows: repeat(1,1fr);
     padding: 80px;
 }
 .pro{
-     width: fit-content;
-    border: 3px solid #6A5A45;
-     border-radius: 30px;
-      font-weight: bold;
-    background-color:white;
+   font-weight: bold;
+   
     padding: 8px;
-    flex: 1;
-     box-shadow: 3px 3px 2px #6A5A45;
+   display: flex;
+   justify-content: center;
+    gap: 8px;
      font-family: initial;
+    
 }
- #projects .h2{margin: 0px;
+.p{
+  border: 3px solid;
+  padding: 20px;
+  background-color: #F0DDC8;
+  width: 100vw;
+  height: 40vh;
+  border-radius: 20px;
+}
+ .p h2{margin: 0px;
    font-family: initial;
-    font-size: 80px;}
+    font-size: 30px;
+  text-align: center;}
 #projects .img{
     display: block;
 margin: auto;
+border-radius: 20px;
+width: 300px;
 }
-@media (max-width: 768px) {
-  #projects {
-    padding: 40px 20px;
-  }
+.h2{
+  text-align: center;
+  font-family: initial;
+  font-size: 70px;
+}
+@media screen and (max-width: 767px) {
 
-  #projects .h2 {
-    font-size: clamp(32px, 8vw, 48px);
-    margin-bottom: 25px;
-    text-align: center;
-  }
+    #projects {
+        padding: 40px 15px;
+    }
 
-  .pro {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
-    text-align: center;
-  }
+    .h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
 
-  .pro h2 {
-    font-size: 1.3rem;
-    margin: 15px 0 10px 0;
-  }
+    .pro {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
+    }
 
-  .pro p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
+    .p {
+        width: 100%;     
+        max-width: 350px;  
+        height: auto;     
+        box-sizing: border-box;
+        padding: 15px;
+    }
 
-  #projects .img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 15px;
-  }
+    #projects .img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+
+    .p h2 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
 }
 
 /*references*/
@@ -419,10 +471,10 @@ margin: auto;
    
     padding: 80px;
 }
-#references h2{margin: 20px;
+#references h2{margin: 10px;
     font-family: initial;
     font-size: 80px;
-
+text-align: center;
 }
 .ref{font-family: initial;
 display: flex;
