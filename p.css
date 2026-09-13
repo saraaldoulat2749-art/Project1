@@ -21,18 +21,22 @@ a{
 .nav-link:hover{
     text-decoration: underline;
 }
+.logo{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 50px;
+font-weight: bold;
+}
 
 
 
-
-#home{min-height: 100vh;
-     padding: 100px;
+#home{
+     padding: 80px;
     background-color:#F0DDC8;
       display: flex;
-     
+     margin-top: 40px;
   justify-content:space-around;
     font-family: initial;
-    align-items: center;
+   
 }
 
 #home p{
@@ -42,8 +46,8 @@ a{
 }
 h1{
     font-size: clamp(28px, 5vw, 70px);
-    line-height: 1.1;
-    margin-bottom: 25px;
+   
+   
 }
 
 #cv{
@@ -71,22 +75,15 @@ h1{
 }
 @media (max-width: 768px) {
   #home {
-    /* تغيير الترتيب ليصبح عمودياً بدلاً من أفقياً */
     flex-direction: column-reverse; 
     justify-content: center;
     text-align: center;
     
-    /* تقليل المسافات الداخلية الكبيرة لتناسب الشاشات الصغيرة */
     padding: 40px 20px;
     min-height: auto;
   }
 
-  /* ضبط الهامش السفلي لصورة الملف الشخصي والنص */
-  .img1 {
-    margin-bottom: 30px;
-  }
 
-  /* محاذاة زر تحميل السيرة الذاتية في المنتصف */
   #cv {
     margin: 0 auto;
     display: inline-block;
@@ -97,7 +94,7 @@ h1{
 
 #about{    background-color:antiquewhite;
    
-    padding: 180px;
+    padding: 80px;
    
 }
  #about .abo{ 
@@ -111,27 +108,23 @@ font-family: initial;
 width: 950px;
 height: 280px;}
 
-#about h2{margin-bottom: 30px;
+#about h2{margin: 0px;
   font-family: initial;
     
-    font-size: 100px;}
+    font-size: 80px;}
 @media (max-width: 768px) {
   #about {
-    /* تقليل الهوامش الداخلية الكبيرة */
     padding: 40px 20px;
   }
 
   #about h2 {
-    /* تصغير حجم العنوان المرتفع جداً ليتناسب مع الهواتف */
     font-size: clamp(32px, 8vw, 48px);
     margin-bottom: 20px;
     text-align: center;
   }
 
   #about .abo {
-    /* جعل العرض مرناً بحد أقصى بدلاً من عرض ثابت */
     width: 100%;
-    /* إلغاء الارتفاع الثابت ليتمدد الصندوق تلقائياً حسب طول النص */
     height: auto; 
     padding: 20px;
     font-size: 1rem;
@@ -139,7 +132,6 @@ height: 280px;}
   }
 
   #about .abo p {
-    /* إضافة مسافة بين الفقرات داخل الصندوق */
     margin-bottom: 15px;
     line-height: 1.6;
   }
@@ -152,55 +144,55 @@ height: 280px;}
 
 #experience{
  background-color:#F0DDC8;
- padding: 180px;
- 
-  
+ padding: 80px; 
 }
-
-#experience div{
-    display: flex;
+.exp{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+ 
+  align-items: center;
+}
+.exp div{
+   
     background-color: white;
     border: 3px solid #6A5A45;
     border-radius: 30px;
     padding: 10px;
-    width: fit-content;
+    width: 80%;
     font-size: x-large;
-    gap: 3px;
+   height: ;
     box-shadow: 3px 3px 2px #6A5A45;
     font-family: initial;
-    margin: auto;
+   
 }
 #experience h2{
-    margin-bottom: 30px;
+    margin: 0px;
     font-family: initial;
-    font-size: 100px;
+    font-size: 80px;
 }
-#experience img{
-    width: 55px;
-    height: 55px;
-    object-fit: cover;
-    border-radius: 8px;
+#experience p{
+    height: 85px;
+font-family: initial;
+ 
+    
 }
 @media (max-width: 768px) {
   #experience {
-    /* تقليل الهوامش الداخلية الكبيرة لحجم الشاشة */
     padding: 40px 20px;
   }
 
   #experience h2 {
-    /* تصغير حجم العنوان ليناسب الهواتف المحمولة */
     font-size: clamp(32px, 8vw, 48px);
     margin-bottom: 20px;
     text-align: center;
   }
 
   #experience div {
-    /* تغيير الاتجاه لعمودي وتوزيع العناصر بالمنتصف */
     flex-direction: column;
     align-items: center;
     text-align: center;
     
-    /* ضبط العرض والأبعاد بدلاً من fit-content ليلائم الشاشة */
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
@@ -209,7 +201,6 @@ height: 280px;}
   }
 
   #experience img {
-    /* تكبير الأيقونة قليلاً لتكون بارزة في المنتصف */
     width: 65px;
     height: 65px;
   }
@@ -217,13 +208,13 @@ height: 280px;}
 /*qualifications*/
 #qualifications{background-color:antiquewhite;
    
-    padding: 180px;
+    padding: 80px;
 
 }
-#qualifications .h2{ margin-bottom: 30px;
+#qualifications .h2{ margin: 20px;
   font-family: initial;
     
-    font-size: 100px;}
+    font-size: 80px;}
 .qua{
     display: flex;
     gap: 7px;
@@ -235,64 +226,37 @@ height: 280px;}
     border: 3px solid #6A5A45;
     box-shadow: 3px 3px 3px #6A5A45;
     border-radius: 30px;
-    padding: 5px;
+    padding: 11px;
     background-color:white;
     width: 500px;
     height: 280px;
 
 
 }
-.q2{ border: 3px solid #6A5A45;
-    box-shadow: 3px 3px 3px #6A5A45;
-    border-radius: 30px;
-    padding: 5px; 
-    background-color:white;
-    width: 500px;
-    height: 280px;
 
-}
 .q1:hover{
     transform:scale(1.1);
 }
-.q2:hover{
-    transform:scale(1.1);
-}
-.just{
-    border: 3px solid #6A5A45;
-    box-shadow: 3px 3px 3px #6A5A45;
-    border-radius: 30px;
-    padding: 5px; 
-    background-color:white;
-    width: 500px;
-    height: 280px;
 
-}
-.just:hover{
-    transform:scale(1.1);
-}
 @media (max-width: 768px) {
   #qualifications {
-    /* تقليل الهوامش الداخلية الكبيرة */
     padding: 40px 20px;
   }
 
   #qualifications .h2 {
-    /* تصغير حجم العنوان ليناسب الهواتف */
     font-size: clamp(32px, 8vw, 48px);
     margin-bottom: 25px;
     text-align: center;
   }
 
   .qua {
-    /* تحويل العناصر لترتيب عمودي */
     flex-direction: column;
     gap: 20px;
   }
 
-  /* تطبيق التعديلات على كافة البطاقات (.just, .q1, .q2) */
   .just, .q1, .q2 {
     width: 100%;
-    height: auto; /* السماح بتمدد الارتفاع تلقائياً حسب النص */
+    height: auto;
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
@@ -303,7 +267,6 @@ height: 280px;}
     margin-bottom: 10px;
   }
 
-  /* إغلاق تأثير التكبير الكبير على الهواتف لمنع ظهور شريط التمرير */
   .just:hover, .q1:hover, .q2:hover {
     transform: none;
   }
@@ -315,7 +278,7 @@ height: 280px;}
 
 
    
-    padding: 180px;
+    padding: 80px;
 }
 #skills div {
 display: grid;
@@ -326,9 +289,9 @@ grid-template-rows: repeat(1,1fr);
     gap: 5px;
    font-family: initial; 
 }
-#skills h2{margin-bottom: 30px;
+#skills h2{margin: 0px;
   font-family: initial;
-    font-size: 100px;}
+    font-size: 80px;}
 #skills .sk{
     width: fit-content;
     border: 3px solid #6A5A45;
@@ -347,32 +310,27 @@ grid-template-rows: repeat(1,1fr);
 }
 @media (max-width: 768px) {
   #skills {
-    /* تقليل الهوامش الداخلية الكبيرة */
     padding: 40px 20px;
   }
 
   #skills h2 {
-    /* تصغير حجم العنوان المرتفع جداً */
     font-size: clamp(32px, 8vw, 48px);
     margin-bottom: 25px;
     text-align: center;
   }
 
   #skills div {
-    /* إعادة توزيع الأيقونات إلى 2 أو 3 أعمدة حسب حجم شاشة الهاتف */
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 15px;
     justify-items: center;
   }
 
   #skills .sk {
-    /* إلغاء fit-content وجعل عرض البطاقة متجاوباً بالكامل */
     width: 100%;
     box-sizing: border-box;
     text-align: center;
     padding: 12px 8px;
     
-    /* محاذاة الصور والنصوص في منتصف كل بطاقة */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -380,7 +338,6 @@ grid-template-rows: repeat(1,1fr);
   }
 
   #skills .sk img {
-    /* توحيد أحجام الصور في الهواتف لتبدو أكثر تناسقاً */
     width: 45px;
     height: 45px;
     object-fit: contain;
@@ -397,7 +354,7 @@ grid-template-rows: repeat(1,1fr);
     background-color:antiquewhite;
 
    
-    padding: 180px;
+    padding: 80px;
 }
 .pro{
      width: fit-content;
@@ -410,28 +367,25 @@ grid-template-rows: repeat(1,1fr);
      box-shadow: 3px 3px 2px #6A5A45;
      font-family: initial;
 }
- #projects .h2{margin-bottom: 30px;
+ #projects .h2{margin: 0px;
    font-family: initial;
-    font-size: 100px;}
+    font-size: 80px;}
 #projects .img{
     display: block;
 margin: auto;
 }
 @media (max-width: 768px) {
   #projects {
-    /* تقليل الهوامش الداخلية الكبيرة لتناسب الشاشات الصغيرة */
     padding: 40px 20px;
   }
 
   #projects .h2 {
-    /* تصغير حجم العنوان المرتفع ليناسب الهواتف */
     font-size: clamp(32px, 8vw, 48px);
     margin-bottom: 25px;
     text-align: center;
   }
 
   .pro {
-    /* جعل بطاقة المشروع تأخذ عرض الشاشة بالكامل بشكل مرن */
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
@@ -449,7 +403,6 @@ margin: auto;
   }
 
   #projects .img {
-    /* جعل حجم الصورة مرناً ومتجاوباً مع عرض البطاقة دون أن تخرج عنها */
     width: 100%;
     max-width: 250px;
     height: auto;
@@ -464,11 +417,11 @@ margin: auto;
 
 
    
-    padding: 180px;
+    padding: 80px;
 }
-#references h2{margin-bottom: 30px;
+#references h2{margin: 20px;
     font-family: initial;
-    font-size: 100px;
+    font-size: 80px;
 
 }
 .ref{font-family: initial;
@@ -487,25 +440,21 @@ gap: 8px;
 }
 @media (max-width: 768px) {
   #references {
-    /* تقليل الهوامش الداخلية الكبيرة لتناسب الشاشات الصغيرة */
     padding: 40px 20px;
   }
 
   #references h2 {
-    /* تصغير حجم العنوان ليناسب الشاشة */
     font-size: clamp(32px, 8vw, 48px);
     margin-bottom: 25px;
     text-align: center;
   }
 
   .ref {
-    /* تحويل ترتيب البطاقات من أفقي إلى عمودي */
     flex-direction: column;
     gap: 15px;
   }
 
   .r1 {
-    /* جعل البطاقة تأخذ كامل عرض الشاشة المتاح */
     width: 100%;
     box-sizing: border-box;
     padding: 15px;
@@ -518,7 +467,6 @@ gap: 8px;
   }
 
   .r1 p {
-    /* معالجة الروابط الطويلة حتى لا تخرج عن حافة البطاقة */
     word-break: break-all;
     font-size: 0.85rem;
   }
@@ -577,7 +525,6 @@ gap: 8px;
   }
 
   .footer-links {
-    /* السماح للروابط بالالتفاف لصفوف متعددة عند صغر الشاشة */
     flex-wrap: wrap;
     gap: 12px 18px;
     margin-bottom: 15px;
@@ -600,7 +547,7 @@ gap: 8px;
   }
 
   .icon i {
-    font-size: 22px; /* تكبير الأيقونات لتكون أسهل للضغط باللمس */
+    font-size: 22px;
   }
 
   #contact p {
