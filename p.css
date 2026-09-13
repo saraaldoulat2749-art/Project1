@@ -3,7 +3,10 @@ body {
     font-family: 'Poppins', sans-serif;
     color:#6A5A45;
 }
-.navbar{background-color:antiquewhite;}
+.navbar{background-color:antiquewhite;
+display: flex;
+flex-direction: column;
+align-items: flex-start;}
 .s{
     color:#F0DDC8;
 }
@@ -22,19 +25,25 @@ a{
 
 
 
-#home{
-    padding: 180px;
+#home{min-height: 100vh;
+     padding: 100px;
     background-color:#F0DDC8;
       display: flex;
-      gap: 300px;
-  
+     
+  justify-content:space-around;
     font-family: initial;
+    align-items: center;
 }
+
 #home p{
-    font-size: 20px;
+   font-size: clamp(15px, 2vw, 20px);
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 h1{
-    font-size: 100px;
+    font-size: clamp(28px, 5vw, 70px);
+    line-height: 1.1;
+    margin-bottom: 25px;
 }
 
 #cv{
@@ -56,12 +65,35 @@ h1{
     background-color: #6A5A45;
     border-radius: 80px;
     box-shadow: 5px 5px 4px #6A5A45 ;
-      
+    width: clamp(200px, 30vw, 320px);
+    height: clamp(200px, 30vw, 320px);
+    
+}
+@media (max-width: 768px) {
+  #home {
+    /* تغيير الترتيب ليصبح عمودياً بدلاً من أفقياً */
+    flex-direction: column-reverse; 
+    justify-content: center;
+    text-align: center;
+    
+    /* تقليل المسافات الداخلية الكبيرة لتناسب الشاشات الصغيرة */
+    padding: 40px 20px;
+    min-height: auto;
+  }
 
+  /* ضبط الهامش السفلي لصورة الملف الشخصي والنص */
+  .img1 {
+    margin-bottom: 30px;
+  }
+
+  /* محاذاة زر تحميل السيرة الذاتية في المنتصف */
+  #cv {
+    margin: 0 auto;
+    display: inline-block;
+  }
 }
 
-
-/*Educatione*/
+/*about*/
 
 #about{    background-color:antiquewhite;
    
@@ -83,13 +115,48 @@ height: 280px;}
   font-family: initial;
     
     font-size: 100px;}
+@media (max-width: 768px) {
+  #about {
+    /* تقليل الهوامش الداخلية الكبيرة */
+    padding: 40px 20px;
+  }
+
+  #about h2 {
+    /* تصغير حجم العنوان المرتفع جداً ليتناسب مع الهواتف */
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  #about .abo {
+    /* جعل العرض مرناً بحد أقصى بدلاً من عرض ثابت */
+    width: 100%;
+    /* إلغاء الارتفاع الثابت ليتمدد الصندوق تلقائياً حسب طول النص */
+    height: auto; 
+    padding: 20px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  #about .abo p {
+    /* إضافة مسافة بين الفقرات داخل الصندوق */
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+
+  #about .abo p:last-child {
+    margin-bottom: 0;
+  }
+}
     /*experience*/
+
 #experience{
  background-color:#F0DDC8;
  padding: 180px;
  
   
 }
+
 #experience div{
     display: flex;
     background-color: white;
@@ -113,6 +180,39 @@ height: 280px;}
     height: 55px;
     object-fit: cover;
     border-radius: 8px;
+}
+@media (max-width: 768px) {
+  #experience {
+    /* تقليل الهوامش الداخلية الكبيرة لحجم الشاشة */
+    padding: 40px 20px;
+  }
+
+  #experience h2 {
+    /* تصغير حجم العنوان ليناسب الهواتف المحمولة */
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  #experience div {
+    /* تغيير الاتجاه لعمودي وتوزيع العناصر بالمنتصف */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    /* ضبط العرض والأبعاد بدلاً من fit-content ليلائم الشاشة */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 1rem;
+    gap: 15px;
+  }
+
+  #experience img {
+    /* تكبير الأيقونة قليلاً لتكون بارزة في المنتصف */
+    width: 65px;
+    height: 65px;
+  }
 }
 /*qualifications*/
 #qualifications{background-color:antiquewhite;
@@ -170,7 +270,44 @@ height: 280px;}
 .just:hover{
     transform:scale(1.1);
 }
+@media (max-width: 768px) {
+  #qualifications {
+    /* تقليل الهوامش الداخلية الكبيرة */
+    padding: 40px 20px;
+  }
 
+  #qualifications .h2 {
+    /* تصغير حجم العنوان ليناسب الهواتف */
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .qua {
+    /* تحويل العناصر لترتيب عمودي */
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* تطبيق التعديلات على كافة البطاقات (.just, .q1, .q2) */
+  .just, .q1, .q2 {
+    width: 100%;
+    height: auto; /* السماح بتمدد الارتفاع تلقائياً حسب النص */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .just h2, .q1 h2, .q2 h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  /* إغلاق تأثير التكبير الكبير على الهواتف لمنع ظهور شريط التمرير */
+  .just:hover, .q1:hover, .q2:hover {
+    transform: none;
+  }
+}
 /*skills*/
 #skills{
 
@@ -208,6 +345,53 @@ grid-template-rows: repeat(1,1fr);
       box-shadow: 0 8px 15px #6A5A45;
       
 }
+@media (max-width: 768px) {
+  #skills {
+    /* تقليل الهوامش الداخلية الكبيرة */
+    padding: 40px 20px;
+  }
+
+  #skills h2 {
+    /* تصغير حجم العنوان المرتفع جداً */
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  #skills div {
+    /* إعادة توزيع الأيقونات إلى 2 أو 3 أعمدة حسب حجم شاشة الهاتف */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    justify-items: center;
+  }
+
+  #skills .sk {
+    /* إلغاء fit-content وجعل عرض البطاقة متجاوباً بالكامل */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 12px 8px;
+    
+    /* محاذاة الصور والنصوص في منتصف كل بطاقة */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #skills .sk img {
+    /* توحيد أحجام الصور في الهواتف لتبدو أكثر تناسقاً */
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+  }
+
+  #skills .sk p {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    word-break: break-word;
+  }
+}
 /*projects*/
 #projects{
     background-color:antiquewhite;
@@ -233,6 +417,46 @@ grid-template-rows: repeat(1,1fr);
     display: block;
 margin: auto;
 }
+@media (max-width: 768px) {
+  #projects {
+    /* تقليل الهوامش الداخلية الكبيرة لتناسب الشاشات الصغيرة */
+    padding: 40px 20px;
+  }
+
+  #projects .h2 {
+    /* تصغير حجم العنوان المرتفع ليناسب الهواتف */
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .pro {
+    /* جعل بطاقة المشروع تأخذ عرض الشاشة بالكامل بشكل مرن */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .pro h2 {
+    font-size: 1.3rem;
+    margin: 15px 0 10px 0;
+  }
+
+  .pro p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  #projects .img {
+    /* جعل حجم الصورة مرناً ومتجاوباً مع عرض البطاقة دون أن تخرج عنها */
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 15px;
+  }
+}
+
 /*references*/
 #references{
 
@@ -247,20 +471,144 @@ margin: auto;
     font-size: 100px;
 
 }
-.ref{font-family: initial;}
+.ref{font-family: initial;
+display: flex;
+gap: 8px;
+}
+.r1{
+    border: 3px solid #6A5A45;
+     border-radius: 30px;
+      font-weight: bold;
+    background-color:white;
+    padding: 8px;
+    flex: 1;
+     box-shadow: 3px 3px 2px #6A5A45;
+     font-family: initial;
+}
+@media (max-width: 768px) {
+  #references {
+    /* تقليل الهوامش الداخلية الكبيرة لتناسب الشاشات الصغيرة */
+    padding: 40px 20px;
+  }
+
+  #references h2 {
+    /* تصغير حجم العنوان ليناسب الشاشة */
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .ref {
+    /* تحويل ترتيب البطاقات من أفقي إلى عمودي */
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .r1 {
+    /* جعل البطاقة تأخذ كامل عرض الشاشة المتاح */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .r1 h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .r1 p {
+    /* معالجة الروابط الطويلة حتى لا تخرج عن حافة البطاقة */
+    word-break: break-all;
+    font-size: 0.85rem;
+  }
+}
 /*contact*/
-#contact{
-    background-color:antiquewhite;
 
-   
-    padding: 180px;
+#contact {
+    background-color: antiquewhite;
+    color: #6A5A45;
+    padding: 30px 20px;
+    text-align: center;
 }
-#contact h2{margin-bottom: 30px;
-    font-family: initial;
-    font-size: 100px;
 
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
 }
-.con{
-    font-family: initial;
-    font-size: 50px;
+
+.footer-links a {
+    color: #6A5A45;
+    text-decoration: none;
+    font-size: 14px;
+    gap: 8px;
 }
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Bootstrap Icons */
+.footer-links i {
+    font-size: 18px;
+    margin-right: 5px;
+  
+}
+
+#contact hr {
+    border: 0;
+    border-top: 1px solid #555;
+    margin: 15px 0;
+}
+
+#contact p {
+    margin: 0;
+    font-size: 13px;
+}
+.icon
+{
+    gap: 8px;
+}
+@media (max-width: 768px) {
+  #contact {
+    padding: 25px 15px;
+  }
+
+  .footer-links {
+    /* السماح للروابط بالالتفاف لصفوف متعددة عند صغر الشاشة */
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 12px;
+  }
+
+  .icon a {
+    color: #6A5A45;
+    text-decoration: none;
+  }
+
+  .icon i {
+    font-size: 22px; /* تكبير الأيقونات لتكون أسهل للضغط باللمس */
+  }
+
+  #contact p {
+    font-size: 12px;
+  }
+}
+
+
+
+
+    
