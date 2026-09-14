@@ -16,18 +16,21 @@ a{
 }
 .nav-link{color: #6A5A45; 
   font-size: 20px;
+
 }
+
 .nav-link:hover{
     text-decoration: underline;
 }
+
 .logo{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 50px;
-font-weight: bold;
-text-shadow: 3px 3px 3px black;
+  font-weight: bold;
+  text-shadow: 3px 3px 3px black;
 }
 
-
+/*==============================home=========================*/
 
 #home{
      padding: 80px;
@@ -36,19 +39,18 @@ text-shadow: 3px 3px 3px black;
      margin-top: 40px;
   justify-content:space-around;
     font-family: initial;
-   
+   height: 95vh;
 }
 
 #home p{
-   font-size: clamp(15px, 2vw, 20px);
+   font-size: 30px;
     line-height: 1.6;
     margin-bottom: 30px;
 }
 h1{
-    font-size: clamp(28px, 5vw, 70px);
-   
-   
+    font-size: 90px;  
 }
+
 
 #cv{
     color: white;
@@ -66,31 +68,52 @@ h1{
    
 }
 .img1{  padding: 10px;
-    background-color: #6A5A45;
-    border-radius: 80px;
+    
+   background-color: #F0DDC8;
     box-shadow: 5px 5px 4px #6A5A45 ;
-    width: clamp(200px, 30vw, 320px);
-    height: clamp(200px, 30vw, 320px);
+    width: 400px;
+    height:450px;
     
 }
 @media (max-width: 768px) {
-  #home {
-    flex-direction: column-reverse; 
-    justify-content: center;
-    text-align: center;
-    
-    padding: 40px 20px;
-    min-height: auto;
-  }
+    #home {
+        padding: 15px 10px;
+        justify-content: space-between;
+        align-items: center;
+       
+        height: 300px;
+        gap: 10px;
+    }
 
 
-  #cv {
-    margin: 0 auto;
-    display: inline-block;
-  }
+    /* ضمان ظهور العنوان كاملاً (Sara ALDoulat) بشكل متناسق وصغير */
+    #home h1 {
+        font-size: 16px !important; /* حجم مناسب جداً ليظهر الاسم كاملاً بجانب الصورة */
+        line-height: 1.2;
+        margin-bottom: 0px;
+        display: block;
+    }
+
+    #home p {
+        font-size: 11px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+
+    .img1 {
+        width: 110px;  
+        height: 140px; 
+        padding: 4px;
+        box-shadow: 2px 2px 3px #6A5A45;
+        flex-shrink: 0;
+    }
+
+    #cv {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
 }
-
-/*about*/
+/*==============================about=========================*/
 
 #about{    background-color:antiquewhite;
    
@@ -141,7 +164,7 @@ font-family: initial;
         line-height: 1.6;
     }
 }
-    /*experience*/
+   /*==============================experience=========================*/
 
 #experience{
  background-color:#F0DDC8;
@@ -162,7 +185,6 @@ font-family: initial;
     padding: 10px;
     width: 80%;
     font-size: x-large;
-   height: ;
     box-shadow: 3px 3px 2px #6A5A45;
     font-family: initial;
    
@@ -210,7 +232,7 @@ background-color:antiquewhite;
     height: 65px;
   }
 }
-/*qualifications*/
+ /*==============================qualifications=========================*/
 #qualifications{background-color:antiquewhite;
    
     padding: 80px;
@@ -296,7 +318,7 @@ background-color:antiquewhite;
     transform: none;
   }
 }
-/*skills*/
+/*==============================skills=========================*/
 #skills{
 
      background-color:#F0DDC8;
@@ -384,7 +406,7 @@ display: grid;
     word-break: break-word;
   }
 }
-/*projects*/
+/*==============================projects=========================*/
 #projects{
     background-color:antiquewhite;
 
@@ -406,8 +428,13 @@ display: grid;
   padding: 20px;
   background-color: #F0DDC8;
   width: 100vw;
-  height: 40vh;
+  height: 50vh;
   border-radius: 20px;
+  display: flex;
+    flex-direction: column; 
+    align-items: center;     
+    justify-content: space-between;
+    gap: 5px;
 }
  .p h2{margin: 0px;
    font-family: initial;
@@ -424,6 +451,22 @@ width: 300px;
   font-family: initial;
   font-size: 70px;
 }
+.ap{
+  color: white;
+    background-color: #6A5A45;
+    box-shadow: 3px 3px 2px #6A5A45;
+    width: fit-content;
+    padding: 10px;
+    border-radius:15px;
+    border: 1px solid #6A5A45;
+     text-decoration: none;
+
+}
+.ap:hover{
+    background-color: #F0DDC8;
+     transform: translateY(-2px);
+}
+
 @media screen and (max-width: 767px) {
 
     #projects {
@@ -459,10 +502,8 @@ width: 300px;
     .p h2 {
         font-size: 20px;
         margin-top: 10px;
-    }
-}
-
-/*references*/
+    }}
+/*==============================references=========================*/
 #references{
 
      background-color:#F0DDC8;
@@ -523,7 +564,8 @@ gap: 8px;
     font-size: 0.85rem;
   }
 }
-/*contact*/
+
+/*==============================contact=========================*/
 
 #contact {
     background-color: antiquewhite;
