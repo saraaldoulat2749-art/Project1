@@ -86,9 +86,8 @@ h1{
     }
 
 
-    /* ضمان ظهور العنوان كاملاً (Sara ALDoulat) بشكل متناسق وصغير */
     #home h1 {
-        font-size: 16px !important; /* حجم مناسب جداً ليظهر الاسم كاملاً بجانب الصورة */
+        font-size: 16px ;
         line-height: 1.2;
         margin-bottom: 0px;
         display: block;
