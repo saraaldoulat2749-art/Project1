@@ -6,7 +6,7 @@ A responsive personal portfolio website created as part of the Full Stack Develo
 ## Technologies
 - HTML5
 - CSS3
-- Bootstrap 5
+- Bootstrap 
 
 ## Sections
 - Home

@@ -10,7 +10,7 @@ a{
     color: #B09480;
 }
 .nav-link{
- color: #6A5A45; 
+ color: #1D4533;
  font-size: 20px;
 }
 .nav-link:hover{
@@ -22,9 +22,9 @@ a{
  font-size: 50px;
  font-weight: bold;
  text-shadow: 3px 3px 3px black;
- color: #B09480;
+ color: #1D4533;
 }
-
+.fa-solid{font-size: 1.3rem;}
 /*==============================home=========================*/
 
 #home{
@@ -33,7 +33,9 @@ a{
  display: flex;
  justify-content:space-around;
  align-items: center;
- height: 95vh;}
+ height: 100vh;
+ color: #1D4533;
+}
 #home p{
  font-size: 35px;
 }
@@ -42,7 +44,7 @@ h1{
 }
 #cv{
  color: white;
- background-color: #6A5A45;
+ background-color: #1D4533;
  box-shadow: 3px 3px 2px #6A5A45;
  width: fit-content;
  padding: 10px;
@@ -103,7 +105,7 @@ font-size: 16px ;}
    /*==============================experience=========================*/
 
 #experience{
- background-color:#F0DDC8;
+ background-color:antiquewhite;
  padding: 80px; 
 }
 .exp{
@@ -127,7 +129,8 @@ font-size: 16px ;}
 #experience p{
  height: 85px;}
 .ex:hover{
- background-color:antiquewhite;
+ background-color:  #1D4533;
+;
  transform: translateX(-8px);}
 @media (max-width: 768px) {
   #experience {
@@ -156,7 +159,7 @@ font-size: 16px ;}
  font-size: 80px;}
 .qua{
  display: flex;
- gap: 7px;
+ gap: 12px;
  flex: 1 ;}
 .q1{
  border: 3px solid #6A5A45;
@@ -175,7 +178,7 @@ font-size: 16px ;}
 }
 .q1 a{ 
  color: white;
- background-color: #6A5A45;
+ background-color: #1D4533;
  box-shadow: 3px 3px 2px #6A5A45;
  width: fit-content;
  padding: 10px;
@@ -187,6 +190,7 @@ font-size: 16px ;}
 .q1 a:hover{
   background-color: #F0DDC8;
 }
+
 @media (max-width: 768px) {
 #qualifications {
  padding: 40px 20px;
@@ -204,45 +208,46 @@ font-size: 16px ;}
 
 }
 /*==============================skills=========================*/
-#skills{
- background-color:#F0DDC8;
- padding: 80px;
-}
-.sk1
-{
- display: flex;
- gap: 20px;
- flex-direction: ;
- justify-content: center;
- align-items: center;
-}
-.sk {
- display: flex;
- flex-wrap: wrap;
- align-content: center;
- border: 3px solid #6A5A45;
- background-color:antiquewhite;
- padding: 8px;
- width: 300px;
- height: 140px;
- gap: 8px;
- font-weight: bold;
- border-radius: 8px;
+#skills {
+  padding: 80px;
+  background-color:antiquewhite;
+
 }
 #skills h2{
- font-size: 70px;
- text-align: center;}
+  font-size: 80px;
+  text-align: center;
+}
+.sk{
+display: flex;
+flex-direction: column;
+  gap: 10px;
+
+
+}
+.sk h3{
+  border-bottom: 3px solid #285a43;
+}
+.sk1{display: flex;
+gap: 100px;
+justify-content: center;
+}
+
 .skill{
- border-radius: 8px;
- border: 3px solid #6A5A45;
- width:fit-content ;
- height: 50px;
- padding: 8px;
+  border: 2px solid #6A5A45;
+  background-color: white;
+  width: 180px;
+  height:80px;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px #1D4533;
 }
 .skill:hover {
-  transform: translateY(-5px);
-  box-shadow: 8px 8px 18px #0a0a0a,-8px -8px 18px #6A5A45;
-}   
+  transform: translateY(-8px);
+  border-color:#6A5A45;
+background-color: #1D4533;}  
 @media (max-width: 768px) {
 #skills {
  padding: 40px ;}
@@ -294,7 +299,7 @@ font-size: 16px ;}
 }
 .ap{
  color: white;
- background-color: #6A5A45;
+ background-color: #1D4533;
  box-shadow: 3px 3px 2px #6A5A45;
  padding: 10px;
  border-radius:15px;
@@ -328,7 +333,7 @@ font-size: 16px ;}
     
 /*==============================references=========================*/
 #references{
- background-color:#F0DDC8;
+ background-color:antiquewhite;
  padding: 80px;
 }
 #references h2{
@@ -337,7 +342,7 @@ font-size: 16px ;}
 }
 .ref{
  display: flex;
- gap: 8px;
+ gap: 12px;
 }
 .r1{
  border: 3px solid #6A5A45;
