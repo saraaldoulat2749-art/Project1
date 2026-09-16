@@ -188,27 +188,19 @@ font-size: 16px ;}
   background-color: #F0DDC8;
 }
 @media (max-width: 768px) {
-  #qualifications {
-    padding: 40px 20px;
+#qualifications {
+ padding: 40px 20px;
   }
-
-  #qualifications .h2 {
-    font-size: clamp(32px, 8vw, 48px);
-    margin-bottom: 25px;
-   
-  }
-
-  .qua {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-   .q1  {
+#qualifications .h2 {
+ font-size: clamp(32px, 8vw, 48px);
+ margin-bottom: 25px;}
+.qua {
+ flex-direction: column;
+ gap: 20px;}
+.q1  {
     width: 100%;
     height: auto;
-    padding: 20px;
-   
-  }
+    padding: 20px;}
 
 }
 /*==============================skills=========================*/
@@ -218,14 +210,16 @@ font-size: 16px ;}
 }
 .sk1
 {
-  display: flex;
- gap: 8px;
+ display: flex;
+ gap: 20px;
+ flex-direction: ;
  justify-content: center;
  align-items: center;
 }
 .sk {
  display: flex;
  flex-wrap: wrap;
+ align-content: center;
  border: 3px solid #6A5A45;
  background-color:antiquewhite;
  padding: 8px;
@@ -237,8 +231,7 @@ font-size: 16px ;}
 }
 #skills h2{
  font-size: 70px;
- text-align: center;
-display: block;}
+ text-align: center;}
 .skill{
  border-radius: 8px;
  border: 3px solid #6A5A45;
@@ -248,7 +241,7 @@ display: block;}
 }
 .skill:hover {
   transform: translateY(-5px);
-  box-shadow: 8px 8px 18px #0a0a0a,-8px -8px 18px #262626;
+  box-shadow: 8px 8px 18px #0a0a0a,-8px -8px 18px #6A5A45;
 }   
 @media (max-width: 768px) {
 #skills {
